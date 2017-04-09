@@ -189,6 +189,7 @@ app.controller('locationsController',[ '$http', '$scope', function($http, $scope
      * 打开分配销售窗口
      */
     $scope.openSalesModal = function() {
+        console.log("djsaklhfdadsubdjdsk")
         $('#assign-modal').modal('show');
     }
 
@@ -224,4 +225,36 @@ app.controller('locationsController',[ '$http', '$scope', function($http, $scope
 
         $('#new-location-modal').modal('show')
     }
+
+    /**
+     *  自定义填充salesman
+     */
+    $.get('http://localhost:8080/ssmtutorial/salesman', function (data) {
+        console.log(data);
+        console.log(JSON.stringify(data));
+        $scope.$apply(function () {
+            $scope.name = data;
+//            if(data != "null") {
+//                ds.contacts = data;
+//                ds.pages = pageservice.pagenate(ds.contacts, ds.limit);
+//            }
+
+        });
+    });
+    $.get('http://localhost:8080/ssmtutorial/kehu', function (data) {
+        console.log(data);
+        console.log(JSON.stringify(data));
+        $scope.$apply(function () {
+            $scope.kehu = data;
+//            if(data != "null") {
+//                ds.contacts = data;
+//                ds.pages = pageservice.pagenate(ds.contacts, ds.limit);
+//            }
+
+        });
+    });
+
+
+
+
 }]);

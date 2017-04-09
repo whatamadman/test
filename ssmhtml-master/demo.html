@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+<h1>{{name}}</h1>
+
+<p>{{profess}}</p>
+
+<!-- jQuery 2.1.4 -->
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="angular/angular.min.js"></script>
+
+
+<script>
+
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $.get('http://localhost:8080/ssmtutorial/salesman', function (data) {
+            console.info(data);
+            console.log(JSON.stringify(data));
+            $scope.$apply(function () {
+                $scope.name = data;
+//                $scope.profess = data.skills;
+            });
+        });
+
+//        //使用JQuery Ajax Post请求
+//        $.post('http://localhost:8080/teacher/8003', {
+//            name: '11',
+//            text: '11'
+//        }, function (data) {
+//            console.info(data);
+//            //方法1.
+//            $scope.$apply(function () {
+//                $scope.user = JSON.parse(data);
+//            });
+//            //方法2
+//            $scope.user = JSON.parse(data);
+//            $scope.$apply();
+//        });
+    });
+
+</script>
+
+</body>
+</html>

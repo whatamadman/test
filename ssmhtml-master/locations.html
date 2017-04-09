@@ -366,14 +366,14 @@
                                 <tr>
                                     <td>沈阳站</td>
                                     <td>2016年6月2号</td>
-                                    <td><span class="label label-default">未分配</span></td>
+                                    <td><span class="label label-primary">未分配</span></td>
                                     <td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </td>
                                     <td>辽宁省沈阳市铁西区胜利南街2号 </td>
                                     <td></td>
                                     <td><span class="btn btn-default btn-sm" ng-click="openSalesModal()"><i class="fa fa-user-plus"></i></span></td>
                                     <td>
                                         <div class="progress xs">
-                                            <div class="progress-bar progress-bar-red" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar progress-bar-red" style="width: 15%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                                 <span class="sr-only">0% Complete</span>
                                             </div>
                                         </div>
@@ -385,43 +385,25 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>沈阳皇朝万豪酒店</td>
-                                    <td>2016年6月2号</td>
-                                    <td><span class="label label-warning">访问中</span></td>
-                                    <td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </td>
-                                    <td>辽宁省沈阳市和平区文安路390号</td>
-                                    <td>2016年6月2日 8点30分</td>
-                                    <td>刘菲菲</td>
-                                    <td>
-                                        <div class="progress progress-xs active">
-                                            <div class="progress-bar progress-bar-red progress-bar-striped" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="text-center">
-                                            <a class="btn btn-default btn-sm" ng-click="openTaskModal()"><i class="fa fa-list-ul"></i></a>
-                                            <a class="btn btn-default btn-sm"><i class="fa fa-edit"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>华润大厦</td>
-                                    <td>2016年6月2号</td>
-                                    <td><span class="label label-success">访问完毕</span></td>
+                                <tr ng-repeat="y in kehu">
+                                    <td>{{y.cname}}</td>
+                                    <td>{{y.ccreatetime}}</td>
+                                    <td><span class="label label-default">未分配</span></td>
                                     <td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </td>
-                                    <td>辽宁省沈阳市和平区青年大街286号</td>
-                                    <td>2016年6月2日 8点30分</td>
-                                    <td>哈维</td>
+                                    <td>{{y.clocation}} </td>
+                                    <td>{{y.clastviewtime}}</td>
+                                    <td><span class="btn btn-default btn-sm" ng-click="openSalesModal()"><i class="fa fa-user-plus"></i></span></td>
                                     <td>
-                                        <div class="progress progress-xs active">
-                                            <div class="progress-bar progress-bar-green progress-bar-striped" style="width: 100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress xs">
+                                            <div class="progress-bar progress-bar-red" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="text-center">
                                             <a class="btn btn-default btn-sm" ng-click="openTaskModal()"><i class="fa fa-list-ul"></i></a>
-                                            <a class="btn btn-default btn-sm"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-default btn-sm" ng-click="openLocationModal(123.393423,41.7944931,'沈阳站')"><i class="fa fa-edit"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -534,80 +516,8 @@
             </div>
             <div class="modal-body" id="assignment-modal-body">
                 <ul class="users-list clearfix">
-                    <li>
-                        <img src="dist/img/user1-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Alexander Pierce</a>
-                        <span class="users-list-date">Today</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user8-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Norman</a>
-                        <span class="users-list-date">Yesterday</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user7-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Jane</a>
-                        <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user6-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">John</a>
-                        <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user2-160x160.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Alexander</a>
-                        <span class="users-list-date">13 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user5-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Sarah</a>
-                        <span class="users-list-date">14 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user4-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Nora</a>
-                        <span class="users-list-date">15 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user3-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Nadia</a>
-                        <span class="users-list-date">15 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user1-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Alexander Pierce</a>
-                        <span class="users-list-date">Today</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user8-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Norman</a>
-                        <span class="users-list-date">Yesterday</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user7-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Jane</a>
-                        <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user6-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">John</a>
-                        <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user2-160x160.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Alexander</a>
-                        <span class="users-list-date">13 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user5-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Sarah</a>
-                        <span class="users-list-date">14 Jan</span>
-                    </li>
-                    <li>
-                        <img src="dist/img/user4-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Nora</a>
-                        <span class="users-list-date">15 Jan</span>
+                    <li ng-repeat="x in name">
+                        {{x.name}}
                     </li>
                 </ul><!-- /.users-list -->
             </div>
@@ -700,18 +610,18 @@
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
+<!--<script src="dist/js/app.min.js"></script>-->
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!--<script src="dist/js/demo.js"></script>-->
 <!-- Angular JS -->
 <script src="angular/angular.min.js"></script>
-<!-- datasource -->
-<script src="angular/consoleds.js"></script>
-<!-- custome page directive -->
-<script src="angular/custom-page.js"></script>
 
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=9a44e3366dfbfb8e72d0150c0ab1b2d4"></script>
 
 <script src="dist/js/locations.js"></script>
+
+<!-- custome page directive -->
+<!--<script src="angular/custom-page.js"></script>-->
+
 </body>
 </html>
