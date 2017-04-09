@@ -543,13 +543,14 @@
                 </div><!-- /input-group -->
                 <br>
                 <table class="table">
-                    <tr>
+
+                    <tr ng-repeat="z in mission">
                         <td class="text-left" style="border-top: none;">
                             <span class="text-green">
                                 <i class="fa fa-circle-o"></i>
                             </span>
                             <span>
-                                给各个商户介绍我们的产品
+                                {{z.message}}
                             </span>
                         </td>
                         <td style="border-top: none;"></td>
@@ -559,38 +560,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="text-left">
-                            <span class="text-black">
-                                <i class="fa fa-check-square-o"></i>
-                            </span>
-                            <span class="text-muted">
-                                去3楼宇宙公司李总办公室取合同
-                            </span>
-                        </td>
-                        <td></td>
-                        <td>
-                            <div class="text-right">
-                                <a href="#" class="delete-task"><i class="fa fa-trash-o"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">
-                            <span class="text-green">
-                                <i class="fa fa-circle-o"></i>
-                            </span>
-                            <span>
-                                去16楼银河公司给张总介绍我们的产品
-                            </span>
-                        </td>
-                        <td></td>
-                        <td>
-                            <div class="text-right">
-                                <a href="#" class="delete-task"><i class="fa fa-trash-o"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+
                 </table>
             </div>
         </div><!-- /.modal-content -->

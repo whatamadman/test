@@ -253,6 +253,19 @@ app.controller('locationsController',[ '$http', '$scope', function($http, $scope
 
         });
     });
+    $.get('http://localhost:8080/ssmtutorial/mission', function (data) {
+        console.log(data);
+        console.log(JSON.stringify(data));
+        $scope.$apply(function () {
+            $scope.mission = data;
+//            if(data != "null") {
+//                ds.contacts = data;
+//                ds.pages = pageservice.pagenate(ds.contacts, ds.limit);
+//            }
+
+        });
+    });
+
 
 
 
